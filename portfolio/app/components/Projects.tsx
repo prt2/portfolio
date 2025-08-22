@@ -173,7 +173,7 @@ const Projects = () => {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={closeModal} />
 
           {/* Modal content */}
-          <div className="relative bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-gray-800">
+          <div className="relative bg-gray-950 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-gray-800">
             {/* Close button */}
             <button
               onClick={closeModal}
@@ -185,7 +185,7 @@ const Projects = () => {
             {/* Scrollable content */}
             <div className="overflow-y-auto max-h-[90vh] custom-scrollbar">
               {/* Project preview image */}
-              <div className="relative h-64 md:h-80 bg-gray-800 overflow-hidden">
+              <div className="relative h-64 md:h-80 bg-gray-900 overflow-hidden">
                 <img
                   src={selectedProject.image || "/placeholder.svg"}
                   alt={selectedProject.name}
