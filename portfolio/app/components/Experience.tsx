@@ -14,18 +14,21 @@ const Experience = () => {
       company: "SFU Robot Soccer",
       date: "May 2025 - Present",
       description: "blah blah blah",
+      logo: "/assets/SFURS.png"
     },
     {
       role: "Mentor",
       company: "SFU Women in Computing Science",
       date: "Aug 2025 - Present",
       description: "blah blah blah",
+      logo: "/assets/wics-logo.jpeg"
     },
     {
       role: "Calc Connect Peer Mentor",
       company: "Simon Fraser University",
       date: "Sept 2024 - Dec 2024",
       description: "blah blah blah",
+      logo: "/assets/SFU-FS-logo.jpg"
     },
   ]
 
@@ -94,8 +97,12 @@ const Experience = () => {
                 key={index}
                 className="bg-card-bg rounded-xl p-6 hover:bg-gray-800/50 transition-colors flex-shrink-0 w-96"
               >
-                <div className="h-40 bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-sm">Experience Preview</span>
+                <div className="h-40 rounded-lg mb-2 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={exp.logo}
+                    alt={`${exp.company} logo`}
+                    className="object-contain h-full w-full p-4"
+                  />
                 </div>
                 <div>
                   <div className="flex justify-between items-start">

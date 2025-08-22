@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const Hero = () => {
   return (
     <section id="about" className="pt-24 pb-16 px-6">
@@ -5,17 +7,21 @@ const Hero = () => {
         <div className="bg-card-bg rounded-2xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
             <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                Hey, I'm <span className="text-accent-green">{"{name}"}</span>!
+              <h1 className="text-2xl md:text-4xl font-bold mb-4 mt-4">
+                Hey, I'm <span className="text-accent-green">{"Pal"}</span>!
               </h1>
 
-              <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                Description
+              <p className="text-gray-300 text-sm md:text-sm mb-6 leading-relaxed">
+                I’m a third-year Computer Science student at Simon Fraser University, 
+                passionate about full-stack development and building projects that make an impact. 
+                Recently, I’ve been exploring AI-powered apps and modern web tools, 
+                and I enjoy taking on challenges that push me to learn new skills. Outside of coding, I love meeting new people, 
+                sharing ideas, and collaborating on projects where I can grow while helping others too.
               </p>
 
               <div className="flex items-center gap-4">
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:paltilva2005@gmail.com"
                   className="bg-accent-green text-black p-3 rounded-lg hover:bg-pink-400 transition-colors"
                   aria-label="Send email"
                 >
@@ -25,7 +31,7 @@ const Hero = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/pal-tilva"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-accent-green text-black p-3 rounded-lg hover:bg-pink-400 transition-colors"
@@ -39,10 +45,15 @@ const Hero = () => {
             </div>
 
             <div className="flex-shrink-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center">
-                <div className="w-28 h-28 md:w-36 md:h-36 bg-gray-300 rounded-full flex items-center justify-center">
-                  <span className="text-gray-600 text-sm">Profile</span>
-                </div>
+              <div className="w-40 h-40 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-white shadow-lg">
+                <Image
+                  src="assets/me.JPG"
+                  alt="Pal Tilva"
+                  width={160}
+                  height={160}
+                  className="object-cover object-[60%_10%] w-full h-full scale-110"
+                  priority
+                />
               </div>
             </div>
           </div>

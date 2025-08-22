@@ -11,61 +11,64 @@ const Projects = () => {
 
   const projects = [
     {
-      name: "NAME",
-      tech: "Tech stack",
-      date: "MM-YYYY",
+      name: "InterviewAI",
+      tech: "React | TailwindCSS | TypeScript | Firebase | ShadCN | Next.js",
+      date: "July-2025",
       description:
         "Description",
       fullDescription:
-        "More detailed description ",
-      image: "/image.png",
+        "An AI-powered prep tool that helps users practice interviews using their resume and job description.",
+      image: "assets/interviewAI.png",
       techStack: [
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
+        "React",
+        "TailwindCSS",
+        "Firebase",
+        "ShadCN",
+        "TypeScript",
+        "Next.js"
       ],
-      liveDemo: "#",
-      sourceCode: "#",
-      watchVideo: "#",
+      liveDemo: "https://interview-ai-prt2.vercel.app/",
+      sourceCode: "https://github.com/prt2/interviewAI",
     },
     {
-      name: "NAME",
-      tech: "Tech stack",
-      date: "MM-YYYY",
+      name: "SkyFare",
+      tech: "React | TailwindCSS | JavaScript | Next.js",
+      date: "Jan-2025 - Apr 2025",
       description:
         "Description",
       fullDescription:
-        "More detailed description ",
-      image: "/image.png",
+        "A flight search web app that integrates Amadeus API to let users find and save flights with ease.",
+      image: "assets/skyfare1.png",
       techStack: [
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
+        "React",
+        "TailwindCSS",
+        "JavaScript",
+        "Next.js",
+        "GitHub Actions",
+        "Sentry",
       ],
-      liveDemo: "#",
-      sourceCode: "#",
-      watchVideo: "#",
+      liveDemo: "https://skyfare19.netlify.app/",
+      sourceCode: "https://github.com/prt2/SkyFare",
     },
     {
-      name: "NAME",
-      tech: "Tech stack",
-      date: "MM-YYYY",
+      name: "ReportVan",
+      tech: "React | TailwindCSS | TypeScript | ShadCN | Next.js | Zod",
+      date: "Nov-2024",
       description:
         "Description",
       fullDescription:
-        "More detailed description ",
-      image: "/image.png",
+        "An emergency reporting platform built for quick response and efficient communication.",
+      image: "assets/reportVan.png",
       techStack: [
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
-        "Tech stack",
+        "React",
+        "TailwindCSS",
+        "TypeScript",
+        "ShadCN",
+        "Next.js",
+        "Zod",
       ],
-      liveDemo: "#",
-      sourceCode: "#",
-      watchVideo: "#",
+      liveDemo: "",
+      sourceCode: "https://github.com/prt2/ReportVan",
     },
   ]
 
@@ -150,15 +153,17 @@ const Projects = () => {
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.name}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover`}
                     />
                   </div>
                   <div className="flex justify-between items-start">
-                    <div>
                       <h3 className="font-semibold text-white">{project.name}</h3>
+                  </div>
+                  <div className="flex justify-between items-start">
                       <p className="text-gray-400 text-sm">{project.tech}</p>
-                    </div>
-                    <span className="text-gray-500 text-sm">{project.date}</span>
+                  </div>
+                  <div className="flex justify-between items-start">
+                      <span className="text-gray-500 text-sm">{project.date}</span>
                   </div>
                 </div>
               ))}
@@ -216,13 +221,16 @@ const Projects = () => {
 
                 {/* Action buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={selectedProject.liveDemo}
-                    className="flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    LIVE DEMO
-                  </a>
+                  {selectedProject.liveDemo && (
+                    <a
+                      href={selectedProject.liveDemo}
+                      className="flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      LIVE DEMO
+                    </a>
+                  )}
+
                   <a
                     href={selectedProject.sourceCode}
                     className="flex items-center justify-center gap-3 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-medium transition-colors"
@@ -230,14 +238,7 @@ const Projects = () => {
                     <Github className="w-5 h-5" />
                     SOURCE CODE
                   </a>
-                  <a
-                    href={selectedProject.watchVideo}
-                    className="flex items-center justify-center gap-3 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
-                  >
-                    <Play className="w-5 h-5" />
-                    WATCH VIDEO
-                  </a>
-                </div>
+                  </div>
               </div>
             </div>
           </div>
