@@ -12,11 +12,11 @@ const Hero = () => {
               </h1>
 
               <p className="text-gray-300 text-sm md:text-sm mb-6 leading-relaxed">
-                I’m a third-year Computer Science student at Simon Fraser University, 
-                passionate about full-stack development and building projects that make an impact. 
-                Recently, I’ve been exploring AI-powered apps and modern web tools, 
-                and I enjoy taking on challenges that push me to learn new skills. Outside of coding, I love meeting new people, 
-                sharing ideas, and collaborating on projects where I can grow while helping others too.
+                I’m a third-year Computer Science student at Simon Fraser University,
+                 passionate about full-stack development and building projects that make an impact.
+                  Lately, I’ve been exploring AI-powered apps and modern web tools.
+                  I love learning new things, meeting people,
+                 and working on projects where I can grow and help others too.
               </p>
 
               <div className="flex items-center gap-4">
