@@ -2,6 +2,7 @@
 
 import { ChevronLeft, ChevronRight, X, ExternalLink, Github, Play } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { motion } from "framer-motion"
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -144,9 +145,14 @@ const Projects = () => {
               style={{ width: "100%", maxWidth: "1000px" }}
             >
               {projects.map((project, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-card-bg rounded-xl p-6 hover:bg-gray-800/50 transition-colors cursor-pointer flex-shrink-0 w-96"
+                  whileHover={{
+                    scale: 1.03,
+                    boxShadow: "0 0 12px rgba(255, 105, 180, 0.3)",
+                  }}
+                  transition={{ duration: 0.15, ease: "easeOut" }}
+                  className="bg-card-bg rounded-xl p-6 transition-all cursor-pointer flex-shrink-0 w-96"
                   onClick={() => openModal(project)}
                 >
                   <div className="h-40 bg-gray-600 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
@@ -157,15 +163,15 @@ const Projects = () => {
                     />
                   </div>
                   <div className="flex justify-between items-start">
-                      <h3 className="font-semibold text-white">{project.name}</h3>
+                    <h3 className="font-semibold text-white">{project.name}</h3>
                   </div>
                   <div className="flex justify-between items-start">
-                      <p className="text-gray-400 text-sm">{project.tech}</p>
+                    <p className="text-gray-400 text-sm">{project.tech}</p>
                   </div>
                   <div className="flex justify-between items-start">
-                      <span className="text-gray-500 text-sm">{project.date}</span>
+                    <span className="text-gray-500 text-sm">{project.date}</span>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
