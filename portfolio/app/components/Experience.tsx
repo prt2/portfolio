@@ -10,21 +10,21 @@ const Experience = () => {
 
   const experiences = [
     {
-      role: "Role",
-      company: "Company",
-      date: "Date - Date",
+      role: "Software Developer",
+      company: "SFU Robot Soccer",
+      date: "May 2025 - Present",
       description: "blah blah blah",
     },
     {
-      role: "Role",
-      company: "Company",
-      date: "Date - Date",
+      role: "Mentor",
+      company: "SFU Women in Computing Science",
+      date: "Aug 2025 - Present",
       description: "blah blah blah",
     },
     {
-      role: "Role",
-      company: "Company",
-      date: "Date - Date",
+      role: "Calc Connect Peer Mentor",
+      company: "Simon Fraser University",
+      date: "Sept 2024 - Dec 2024",
       description: "blah blah blah",
     },
   ]
@@ -97,12 +97,16 @@ const Experience = () => {
                 <div className="h-40 bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-gray-400 text-sm">Experience Preview</span>
                 </div>
-                <div className="flex justify-between items-start">
-                  <div>
+                <div>
+                  <div className="flex justify-between items-start">
                     <h3 className="font-semibold text-white">{exp.role}</h3>
+                  </div>
+                  <div className="flex justify-between items-start">
                     <p className="text-gray-400 text-sm">{exp.company}</p>
                   </div>
-                  <span className="text-gray-500 text-sm">{exp.date}</span>
+                  <div className="flex justify-between items-start">
+                    <span className="text-gray-500 text-sm">{exp.date}</span>
+                  </div>
                 </div>
               </div>
             ))}
