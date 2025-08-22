@@ -111,7 +111,7 @@ const Projects = () => {
   return (
     <>
       <section id="projects" className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl md:text-3xl font-bold">My Projects</h2>
           </div>
