@@ -22,6 +22,9 @@ yarn-error.log*
 # Ignore Vite cache
 .vite
 
+# Ignore Next.js cache
+.next
+
 # Ignore coverage reports
 coverage/
 
