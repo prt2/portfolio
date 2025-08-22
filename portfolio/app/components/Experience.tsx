@@ -1,26 +1,31 @@
 "use client"
 
+import { motion } from "framer-motion"
+
 const Experience = () => {
   const experiences = [
     {
       role: "Software Developer",
       company: "SFU Robot Soccer",
       date: "May 2025 - Present",
-      description: "Built and debugged AI path-planning and obstacle avoidance features for autonomous soccer robots.",
+      description:
+        "Built and debugged AI path-planning and obstacle avoidance features for autonomous soccer robots.",
       logo: "/assets/SFURS-logo.png",
     },
     {
       role: "Mentor",
       company: "SFU Women in Computing Science",
       date: "Aug 2025 - Present",
-      description: "Guided first-year students in computing, offering support with coursework and career paths through WiCS.",
+      description:
+        "Guided first-year students in computing, offering support with coursework and career paths through WiCS.",
       logo: "/assets/sfu_wics_logo.jpeg",
     },
     {
       role: "Calc Connect Peer Mentor",
       company: "Simon Fraser University",
       date: "Sept 2024 - Dec 2024",
-      description: "Hosted problem-solving sessions for over 40 students, improving performance in introductory calculus courses.",
+      description:
+        "Hosted problem-solving sessions for over 40 students, improving performance in introductory calculus courses.",
       logo: "/assets/sfu-logo.png",
     },
   ]
@@ -32,11 +37,16 @@ const Experience = () => {
 
         <div className="grid gap-8">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card-bg rounded-xl p-6 hover:bg-gray-800/50 transition-colors flex flex-col sm:flex-row items-start gap-6"
-            >
-              <div className="flex-shrink-0 bg-white">
+              whileHover={{
+              scale: 1.03,
+              boxShadow: "0 0 12px rgba(255, 105, 180, 0.3)"
+              }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="bg-card-bg rounded-xl p-6 transition-all flex flex-col sm:flex-row items-start gap-6"
+              >
+              <div className="flex-shrink-0 bg-white rounded-lg overflow-hidden">
                 <img
                   src={exp.logo}
                   alt={`${exp.company} logo`}
@@ -50,7 +60,7 @@ const Experience = () => {
                 <p className="text-gray-500 text-sm mb-2">{exp.date}</p>
                 <p className="text-gray-300 text-sm">{exp.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
