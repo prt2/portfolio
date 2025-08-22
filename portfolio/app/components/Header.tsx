@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark-bg/90 backdrop-blur-sm border-b border-gray-800">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-accent-green">xyz.dev</div>
+        <div className="text-xl font-bold text-accent-green">prt2.dev</div>
 
         <ul className="flex space-x-8 text-sm">
           <li>
@@ -40,12 +40,12 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/resume.pdf"
+              href="assets/ResumeZ.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent-green transition-colors"
             >
-              my resume
+              Resume
             </a>
           </li>
         </ul>
