@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/assets/ResumeZ.pdf"
+              href="/assets/Pal_WebDev.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent-green transition-colors"
@@ -111,7 +111,7 @@ const Header = () => {
           Skills
         </button>
         <a
-          href="/assets/ResumeZ.pdf"
+          href="/assets/Pal_WebDev.pdf"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setOpen(false)}
