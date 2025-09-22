@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/assets/Pal_WebDev.pdf"
+              href="/assets/Resume_Pal.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent-green transition-colors"
